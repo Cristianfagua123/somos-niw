@@ -1,0 +1,422 @@
+/* ==========================================================
+   ESTILOS DE LA PÁGINA DE DEMOS (DEMO.CSS)
+   ========================================================== */
+
+/* Hero de Demos */
+.demo-hero {
+  padding: 60px 0 40px;
+  text-align: center;
+}
+
+.demo-pill-badge {
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid rgba(135, 155, 146, 0.6);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.5);
+  margin-bottom: 20px;
+}
+
+.demo-hero-title {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  margin-bottom: 16px;
+}
+
+.demo-hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 640px;
+  margin: 0 auto 36px;
+}
+
+/* Filtros de Categoría */
+.demo-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.filter-btn {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(142, 158, 151, 0.5);
+  padding: 9px 20px;
+  border-radius: var(--radius-pill);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-main);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover {
+  background: #111827;
+  border-color: #111827;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: #111827;
+  border-color: #111827;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(17, 24, 39, 0.2);
+}
+
+/* Cuadrícula de Demos */
+.demos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 32px;
+  margin-bottom: 70px;
+}
+
+.demo-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.demo-card:hover {
+  background: #ffffff;
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: #a8bcaf;
+}
+
+.demo-card.hidden {
+  display: none;
+}
+
+/* Vista previa de imágenes dentro de la tarjeta */
+.demo-preview-box {
+  position: relative;
+  background: linear-gradient(135deg, #e3ede7 0%, #d5e4dc 100%);
+  padding: 24px 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  overflow: hidden;
+  min-height: 220px;
+}
+
+.demo-laptop-thumb {
+  width: 65%;
+  height: auto;
+  border-radius: 4px;
+  filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.12));
+  transition: var(--transition);
+}
+
+.demo-mobile-thumb {
+  width: 25%;
+  height: auto;
+  border-radius: 12px;
+  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.16));
+  transition: var(--transition);
+}
+
+.demo-card:hover .demo-laptop-thumb {
+  transform: scale(1.03) translateY(-2px);
+}
+
+.demo-card:hover .demo-mobile-thumb {
+  transform: scale(1.05) translateY(-4px);
+}
+
+/* Contenido de la tarjeta */
+.demo-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.demo-tag {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background: #eef5f1;
+  color: #1e3a2f;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.demo-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+
+.demo-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin-bottom: 18px;
+}
+
+.demo-features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 22px;
+  padding-left: 0;
+}
+
+.demo-features-list li {
+  font-size: 0.82rem;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.demo-features-list li::before {
+  content: '✓';
+  color: #2fa390;
+  font-weight: 700;
+}
+
+/* Botones de acción en la tarjeta */
+.demo-card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.btn-demo-view {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--border-dark);
+  background: transparent;
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.btn-demo-view:hover {
+  background: var(--text-main);
+  color: #fff;
+}
+
+.btn-demo-request {
+  flex: 1.2;
+  padding: 10px 14px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid #2fa390;
+  background: #2fa390;
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.btn-demo-request:hover {
+  background: #268979;
+  border-color: #268979;
+  transform: translateY(-1px);
+}
+
+/* Banner de Cotización al pie */
+.demo-bottom-cta {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-card);
+  padding: 48px 36px;
+  text-align: center;
+  margin-bottom: 70px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.demo-cta-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+.demo-cta-text {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 580px;
+  margin: 0 auto 28px;
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(17, 24, 39, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox-modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-container {
+  background: #ffffff;
+  border-radius: 16px;
+  max-width: 1000px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+  padding: 32px;
+  transform: scale(0.96);
+  transition: transform 0.3s ease;
+}
+
+.lightbox-modal.open .lightbox-container {
+  transform: scale(1);
+}
+
+.lightbox-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #f1f5f9;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1e293b;
+  transition: var(--transition);
+}
+
+.lightbox-close-btn:hover {
+  background: #e2e8f0;
+  color: #000;
+}
+
+.lightbox-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.lightbox-subtitle {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+.lightbox-images-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background: #f8fafc;
+  padding: 30px 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.lightbox-laptop-view {
+  width: 68%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.lightbox-mobile-view {
+  width: 24%;
+  height: auto;
+  border-radius: 14px;
+}
+
+.lightbox-cta-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .demos-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .lightbox-images-row {
+    flex-direction: column;
+  }
+  
+  .lightbox-laptop-view {
+    width: 100%;
+  }
+  
+  .lightbox-mobile-view {
+    width: 50%;
+  }
+  
+  .demo-card-actions {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Niw.</title>
+  <meta name="description" content="Da el salto digital con sitios profesionales, autoadministrables listos para vender. Ideales para e-commerce, restaurantes, joyerías, ópticas, inmobiliarias, autos y consultorios.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/images/Logo/logo_niw_wordmark.png">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Banner de Visitante Referido (se activa si la URL contiene ?ref=...) -->
+  <div class="index-ref-alert-banner" id="index-ref-alert-banner">
+    🎉 <strong>¡Bienvenido!</strong> Fuiste invitado con el código de referido <strong id="index-ref-code-display">NIW-XXXX</strong>. ¡Cotiza tu web hoy y recibe asesoría prioritaria!
+    <button type="button" class="close-banner" id="btn-close-ref-banner" aria-label="Cerrar aviso">&times;</button>
+  </div>
+
+  <!-- ==========================================================
+       BARRA DE NAVEGACIÓN
+       ========================================================== -->
+  <header class="site-nav" id="site-nav">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-logo" aria-label="Niw - Si lo imaginas, lo programamos">
+        <img src="assets/images/logo.png" alt="Niw - Si lo imaginas, lo programamos" class="brand-logo-img" id="site-logo">
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="#ideales-para" class="nav-link">Ideales para</a></li>
+          <li><a href="#personalizar-configuracion" class="nav-link">Cotizar</a></li>
+          <li><a href="#que-viene-despues" class="nav-link">Planes & Proceso</a></li>
+          <li><a href="referidos.html" class="nav-referral-pill">🎁 Gana tu Web Gratis</a></li>
+          <li><a href="demo.html" class="nav-cta-btn">Ver Demos en Vivo</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- ==========================================================
+         HERO SECTION
+         ========================================================== -->
+    <section class="hero-section">
+      <div class="container">
+        <h1 class="hero-title">
+          Creamos páginas<br>
+          web a tu medida
+        </h1>
+
+        <p class="hero-subtitle">
+          Da el salto digital con sitios profesionales, autoadministrables listos para vender.
+        </p>
+
+        <!-- Botones de Acción Principales -->
+        <div class="hero-actions">
+          <a href="#personalizar-configuracion" class="btn-pill-action" id="btn-cotiza">
+            COTIZA TU WEB
+          </a>
+
+          <a href="#que-viene-despues" class="btn-pill-action" id="btn-planes">
+            VER PLANES
+          </a>
+
+          <a href="demo.html" class="btn-pill-action btn-demo-highlight" id="btn-demo">
+            QUIERO UN DEMO GRATIS
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SECCIÓN: "IDEALES PARA" Y MOCKUPS INTERACTIVOS
+         ========================================================== -->
+    <section class="showcase-section" id="ideales-para">
+      <div class="container">
+        <div class="ideales-header">
+          <h2 class="ideales-title">Ideales para:</h2>
+
+          <!-- Botones de Categorías (Hover / Click para cambiar portatil y celular) -->
+          <div class="category-buttons-group" role="tablist" aria-label="Sectores destacados">
+            <button class="cat-btn active" data-category="ecommerce" role="tab" aria-selected="true">
+              <span class="cat-btn-icon">🛍️</span> E-commerce
+            </button>
+            <button class="cat-btn" data-category="restaurantes" role="tab" aria-selected="false">
+              <span class="cat-btn-icon">🍔</span> Restaurantes
+            </button>
+            <button class="cat-btn" data-category="joyerias" role="tab" aria-selected="false">
+              <span class="cat-btn-icon">💎</span> Joyerías
+            </button>
+            <button class="cat-btn" data-category="opticas" role="tab" aria-selected="false">
+              <span class="cat-btn-icon">👓</span> Ópticas
+            </button>
+            <button class="cat-btn" data-category="inmobiliarias" role="tab" aria-selected="false">
+              <span class="cat-btn-icon">🏡</span> Inmobiliarias
+            </button>
+            <button class="cat-btn" data-category="autos" role="tab" aria-selected="false">
+              <span class="cat-btn-icon">🚗</span> Venta de autos
+            </button>
+            <button class="cat-btn" data-category="consultorios" role="tab" aria-selected="false">
+              <span class="cat-btn-icon">🩺</span> Consultorios
+            </button>
+          </div>
+
+          <!-- Indicador en vivo de la categoría activa -->
+          <div class="preview-status-pill">
+            <span class="status-dot"></span>
+            <span id="preview-status-text">Mostrando: <strong>E-commerce</strong> — Tienda en línea completa con carrito, catálogo interactivo y pasarela de pago.</span>
+          </div>
+        </div>
+
+        <!-- Escenario de Dispositivos (Portátil + Celular) -->
+        <div class="devices-stage">
+          <!-- Portátil / Laptop (830 x 567) -->
+          <div class="laptop-stage-wrapper" aria-label="Vista previa de computador">
+            <img src="assets/images/mockups/ecommerce_laptop.png" alt="Diseño web para E-commerce en computador" class="laptop-mockup-img active" data-category="ecommerce">
+            <img src="assets/images/mockups/restaurantes_laptop.png" alt="Diseño web para Restaurantes y hamburguesas en computador" class="laptop-mockup-img" data-category="restaurantes">
+            <img src="assets/images/mockups/joyerias_laptop.png" alt="Diseño web para Joyerías y diamantes en computador" class="laptop-mockup-img" data-category="joyerias">
+            <img src="assets/images/mockups/opticas_laptop.png" alt="Diseño web para Ópticas y monturas en computador" class="laptop-mockup-img" data-category="opticas">
+            <img src="assets/images/mockups/inmobiliarias_laptop.png" alt="Diseño web para Inmobiliarias y casas en computador" class="laptop-mockup-img" data-category="inmobiliarias">
+            <img src="assets/images/mockups/autos_laptop.png" alt="Diseño web para Concesionario de autos en computador" class="laptop-mockup-img" data-category="autos">
+            <img src="assets/images/mockups/consultorios_laptop.png" alt="Diseño web para Consultorios médicos en computador" class="laptop-mockup-img" data-category="consultorios">
+          </div>
+
+          <!-- Celular / Teléfono Móvil (294 x 539) -->
+          <div class="mobile-stage-wrapper" aria-label="Vista previa móvil">
+            <img src="assets/images/mockups/ecommerce_mobile.png" alt="Diseño web móvil para E-commerce" class="mobile-mockup-img active" data-category="ecommerce">
+            <img src="assets/images/mockups/restaurantes_mobile.png" alt="Diseño web móvil para Restaurantes y hamburguesas" class="mobile-mockup-img" data-category="restaurantes">
+            <img src="assets/images/mockups/joyerias_mobile.png" alt="Diseño web móvil para Joyerías" class="mobile-mockup-img" data-category="joyerias">
+            <img src="assets/images/mockups/opticas_mobile.png" alt="Diseño web móvil para Ópticas" class="mobile-mockup-img" data-category="opticas">
+            <img src="assets/images/mockups/inmobiliarias_mobile.png" alt="Diseño web móvil para Inmobiliarias" class="mobile-mockup-img" data-category="inmobiliarias">
+            <img src="assets/images/mockups/autos_mobile.png" alt="Diseño web móvil para Concesionario de autos" class="mobile-mockup-img" data-category="autos">
+            <img src="assets/images/mockups/consultorios_mobile.png" alt="Diseño web móvil para Consultorios médicos" class="mobile-mockup-img" data-category="consultorios">
+          </div>
+        </div>
+
+        <p class="stage-helper-text">
+          💡 Pasa el cursor o haz clic en cualquier categoría para cambiar la previsualización en vivo.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SECCIÓN: "AYÚDANOS A PERSONALIZAR TU CONFIGURACIÓN"
+         ========================================================== -->
+    <section class="config-section" id="personalizar-configuracion">
+      <div class="container">
+        <div class="config-grid">
+          <!-- Columna Izquierda: Título y Badge -->
+          <div class="config-info">
+            <span class="badge-empezar">EMPEZAR</span>
+            <h2 class="config-title">
+              Ayúdanos a<br>
+              personalizar tu<br>
+              configuración
+            </h2>
+          </div>
+
+          <!-- Columna Derecha: Tarjeta de Formulario -->
+          <div class="config-card">
+            <form id="config-form" novalidate>
+              <div class="form-group">
+                <label for="form-company" class="form-label">Nombre de la empresa</label>
+                <input type="text" id="form-company" class="form-control" placeholder="Ej: Mi Empresa o Marca" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Necesito una web para:</label>
+                <!-- Botones interactivos para seleccionar la categoría deseada -->
+                <div class="form-category-pills" id="form-category-pills" role="radiogroup" aria-label="Selecciona la categoría para tu web">
+                  <button type="button" class="form-cat-pill active" data-category="E-commerce">
+                    <span>🛍️</span> E-commerce
+                  </button>
+                  <button type="button" class="form-cat-pill" data-category="Restaurantes">
+                    <span>🍔</span> Restaurantes
+                  </button>
+                  <button type="button" class="form-cat-pill" data-category="Joyerías">
+                    <span>💎</span> Joyerías
+                  </button>
+                  <button type="button" class="form-cat-pill" data-category="Ópticas">
+                    <span>👓</span> Ópticas
+                  </button>
+                  <button type="button" class="form-cat-pill" data-category="Inmobiliarias">
+                    <span>🏡</span> Inmobiliarias
+                  </button>
+                  <button type="button" class="form-cat-pill" data-category="Venta de autos">
+                    <span>🚗</span> Venta de autos
+                  </button>
+                  <button type="button" class="form-cat-pill" data-category="Consultorios">
+                    <span>🩺</span> Consultorios
+                  </button>
+                </div>
+                <!-- Campo oculto para registrar la categoría seleccionada -->
+                <input type="hidden" id="form-selected-category" name="categoria" value="E-commerce">
+              </div>
+
+              <div class="form-group">
+                <label for="form-deadline" class="form-label">¿Cuál es tu presupuesto?</label>
+                <input type="date" id="form-deadline" class="form-control">
+              </div>
+
+              <button type="submit" class="btn-form-submit">
+                Enviar
+              </button>
+
+              <p class="form-disclaimer">
+                El nombre de tu empresa no se compartirá. Nunca envíes contraseñas.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SECCIÓN: PLANES Y PROCESO
+         ========================================================== -->
+    <section class="pricing-section" id="que-viene-despues">
+      <div class="container">
+        
+        <!-- ENCABEZADO DE PLANES -->
+        <div class="pricing-header">
+          <span class="pricing-pill-badge">PLANES Y PRECIOS</span>
+          <h2 class="pricing-main-title">Elige el plan ideal para tu negocio</h2>
+          <p class="pricing-subtitle">
+            Soluciones autoadministrables con infraestructura, mantenimiento y soporte incluidos desde el primer día.
+          </p>
+        </div>
+
+        <!-- CUADRÍCULA DE LOS 3 PLANES -->
+        <div class="pricing-grid">
+          
+          <!-- PLAN 1: BASIC -->
+          <article class="pricing-card">
+            <div class="plan-header">
+              <h3 class="plan-name">Basic</h3>
+              <div class="plan-price-wrap">
+                <span class="plan-price">$ 477.000</span>
+                <span class="plan-currency">COP / Base</span>
+              </div>
+              <p class="plan-description">
+                Ideal para lanzar tu catálogo online y empezar a vender directamente por WhatsApp.
+              </p>
+            </div>
+
+            <ul class="plan-features-list">
+              <li><span class="feat-icon">✓</span> <span><strong>Desarrollo de app</strong> web responsiva</span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Infraestructura:</strong> Dominio .com + Hosting optimizado <span class="feat-tag">Gratis 1 año</span></span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Mantenimiento:</strong> 1 año incluido <span class="feat-tag">Gratis 1 año</span></span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Panel de administrador</strong> fácil de usar</span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Panel de Finanzas</strong> para control de ventas</span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Vinculación a redes sociales</strong> (Instagram, FB)</span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Cargue ilimitado</strong> de productos</span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Catálogo de productos:</strong> 25 ítems cargados por el desarrollador</span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Carrito de compras</strong> vinculado a WhatsApp</span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Renovación anual y mantenimiento:</strong> $ 70.000 <small>(a partir del 2.º año)</small></span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Soporte técnico</strong></span></li>
+            </ul>
+
+            <!-- Servicios Adicionales Basic -->
+            <!-- <div class="plan-addons-box">
+              <div class="plan-addons-title">
+                <span>⚡</span> Servicios Adicionales
+              </div>
+            </div> -->
+
+            <a href="https://api.whatsapp.com/send?phone=573243651165&text=Hola%2C%20me%20interesa%20contratar%20el%20Plan%20Basic%20($477.000)%20para%20mi%20negocio" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn-plan-cta">
+              Elegir Plan Basic
+            </a>
+          </article>
+
+          <!-- PLAN 2: PLAN MEDIUM (RECOMENDADO / MÁS POPULAR) -->
+          <article class="pricing-card popular">
+            <span class="plan-badge popular-badge">MÁS POPULAR</span>
+            <div class="plan-header">
+              <h3 class="plan-name">Plan Medium</h3>
+              <div class="plan-price-wrap">
+                <span class="plan-price">$ 750.000</span>
+                <span class="plan-currency">COP / Base</span>
+              </div>
+              <p class="plan-description">
+                Potencia tus ventas con asesoría de Inteligencia Artificial integrada y métricas premium.
+              </p>
+            </div>
+
+            <ul class="plan-features-list">
+              <li><span class="feat-icon">✓</span> <span><strong>Desarrollo de app</strong> web responsiva</span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Infraestructura:</strong> Dominio .com + Hosting optimizado <span class="feat-tag">Gratis 1 año</span></span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Mantenimiento:</strong> 1 año incluido <span class="feat-tag">Gratis 1 año</span></span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Panel de administrador</strong> y <strong>Finanzas</strong></span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Vinculación a redes sociales</strong></span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Cargue ilimitado</strong> de productos</span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Catálogo de productos:</strong> 50 ítems cargados por el desarrollador</span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Carrito de compras</strong> vinculado a WhatsApp</span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Renovación anual y mantenimiento:</strong> $ 70.000 <small>(en 2.º año)</small></span></li>
+              <li class="highlight-item"><span class="feat-icon">🤖</span> <span><strong>Asesor IA integrado</strong> dentro de la web</span></li>
+              <li class="highlight-item"><span class="feat-icon">📝</span> <span><strong>Formulario de contacto / cotización directa</strong></span></li>
+              <li class="highlight-item"><span class="feat-icon">📈</span> <span><strong>Indicadores de gestión premium</strong></span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Soporte prioritario</strong></span></li>
+            </ul>
+
+            <!-- <div class="plan-addons-box">
+              <div class="plan-addons-title">
+                <span>⚡</span> Servicios Adicionales
+              </div>
+            </div> -->
+
+            <a href="https://api.whatsapp.com/send?phone=573243651165&text=Hola%2C%20me%20interesa%20contratar%20el%20Plan%20Medium%20($750.000)%20para%20mi%20negocio" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn-plan-cta">
+              Elegir Plan Medium 🚀
+            </a>
+          </article>
+
+          <!-- PLAN 3: PLAN HIGH (PRONTO) -->
+          <article class="pricing-card">
+            <span class="plan-badge soon-badge">PRONTO</span>
+            <div class="plan-header">
+              <h3 class="plan-name">Plan High</h3>
+              <div class="plan-price-wrap">
+                <span class="plan-price">$ 1.450.000</span>
+                <span class="plan-currency">COP / Base</span>
+              </div>
+              <p class="plan-description">
+                Solución corporativa integral con pasarela de pagos integrada y soporte VIP dedicado.
+              </p>
+            </div>
+
+            <ul class="plan-features-list">
+              <li><span class="feat-icon">✓</span> <span><strong>Desarrollo de app</strong> web corporativa</span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Infraestructura:</strong> Dominio .com + Hosting optimizado <span class="feat-tag">Gratis 1 año</span></span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Mantenimiento:</strong> 1 año incluido <span class="feat-tag">Gratis 1 año</span></span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Panel de administrador</strong> y <strong>Finanzas</strong></span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Vinculación a redes sociales</strong></span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Cargue ilimitado</strong> de productos</span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Catálogo de productos:</strong> 50 ítems cargados por el desarrollador</span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Carrito de compras</strong> vinculado a WhatsApp</span></li>
+              <li><span class="feat-icon">✓</span> <span><strong>Renovación anual y mantenimiento:</strong> $ 70.000 <small>(en 2.º año)</small></span></li>
+              <li class="highlight-item"><span class="feat-icon">🤖</span> <span><strong>Asesor IA integrado</strong> dentro de la web</span></li>
+              <li class="highlight-item"><span class="feat-icon">📝</span> <span><strong>Formulario de contacto / cotización directa</strong></span></li>
+              <li class="highlight-item"><span class="feat-icon">📈</span> <span><strong>Indicadores de gestión premium</strong></span></li>
+              <li class="highlight-item"><span class="feat-icon">💳</span> <span><strong>Pasarela de pagos integrada</strong> (Tarjetas, PSE)</span></li>
+              <li class="highlight-item"><span class="feat-icon">👑</span> <span><strong>Soporte VIP dedicado</strong></span></li>
+            </ul>
+
+            <!-- Servicios Adicionales High -->
+            <!-- <div class="plan-addons-box">
+              <div class="plan-addons-title">
+                <span>⚡</span> Servicios Adicionales
+              </div>
+            </div> -->
+
+            <a href="https://api.whatsapp.com/send?phone=573243651165&text=Hola%2C%20me%20interesa%20reservar%20el%20Plan%20High%20($1.450.000)%20para%20mi%20negocio" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn-plan-cta">
+              Reservar Plan High
+            </a>
+          </article>
+
+        </div>
+
+        <!-- SEPARADOR Y PROCESO "¿QUÉ VIENE DESPUÉS?" -->
+        <div class="plans-process-divider"></div>
+
+        <div style="text-align: center;">
+          <span class="steps-pill-header">¿QUÉ VIENE DESPUÉS?</span>
+
+          <div class="steps-grid">
+            <!-- Paso 1 -->
+            <div class="step-card">
+              <span class="step-number">1</span>
+              <div>
+                <h3 class="step-title">CONFIGURACIÓN DE LA CUENTA</h3>
+                <p class="step-desc">
+                  Configuración completa de hosting ultra rápido, dominio personalizado, certificados SSL y base técnica lista.
+                </p>
+              </div>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="step-card">
+              <span class="step-number">2</span>
+              <div>
+                <h3 class="step-title">LLAMADA INICIAL</h3>
+                <p class="step-desc">
+                  Sesión para alinear tu marca, paleta de colores y productos, todo a tu medida.
+                </p>
+              </div>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="step-card">
+              <span class="step-number">3</span>
+              <div>
+                <h3 class="step-title">ENTRENAMIENTO</h3>
+                <p class="step-desc">
+                  Te capacitamos para que administres tu tienda, actualices productos y consultes estadísticas con total libertad.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Botón Empezar -->
+          <div>
+            <a href="#personalizar-configuracion" class="btn-pill-start" id="btn-start-steps">
+              Empezar
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SECCIÓN EN LA PARTE BAJA: PROGRAMA DE REFERIDOS
+         ========================================================== -->
+    <section class="bottom-referral-cta" id="sistema-referidos">
+      <div class="container">
+        <div class="bottom-ref-card">
+          <div class="bottom-ref-badge">
+            <span>🎁</span> PROGRAMA EXCLUSIVO DE REFERIDOS NIW
+          </div>
+
+          <h2 class="bottom-ref-title">
+            ¿Quieres tu Página Web<br>
+            <span>100% Gratis?</span>
+          </h2>
+
+          <p class="bottom-ref-subtitle">
+            Invita a 5 amigos, colegas o empresas a crear su sitio web profesional. Cuando completen su registro o coticen con tu enlace, desbloqueas un cupón del <strong>100% de descuento</strong> para una página web completa (Plan Basic valorado en <strong>$ 477.000 COP</strong>).
+          </p>
+
+          <div class="bottom-ref-steps">
+            <div class="bottom-ref-step-item">
+              <div class="bottom-ref-step-icon">1</div>
+              <div class="bottom-ref-step-text">
+                <strong>Crea tu código único</strong>
+                <span>Genera tu enlace personalizado en 5 segundos.</span>
+              </div>
+            </div>
+
+            <div class="bottom-ref-step-item">
+              <div class="bottom-ref-step-icon">2</div>
+              <div class="bottom-ref-step-text">
+                <strong>Invita a 5 personas</strong>
+                <span>Comparte fácilmente por WhatsApp o redes sociales.</span>
+              </div>
+            </div>
+
+            <div class="bottom-ref-step-item">
+              <div class="bottom-ref-step-icon">3</div>
+              <div class="bottom-ref-step-text">
+                <strong>¡Web 100% Gratis!</strong>
+                <span>Reclama tu web de $ 477.000 COP sin pagar nada.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom-ref-actions">
+            <a href="referidos.html" class="bottom-ref-btn-primary" id="btn-ir-referidos">
+              <span>🚀</span> CREAR MI CÓDIGO DE REFERIDO
+            </a>
+            <a href="referidos.html#como-funciona" class="bottom-ref-btn-secondary">
+              <span>ℹ️</span> ¿Cómo funciona el programa?
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================
+       FOOTER
+       ========================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Columna 1 -->
+        <div>
+          <div class="footer-col-title">Contacto</div>
+          <p class="footer-text">
+            WhatsApp: <a href="https://api.whatsapp.com/send?phone=573243651165&text=Hola%2C%20me%20gustar%C3%ADa%20cotizar%20mi%20p%C3%A1gina%20web" target="_blank" rel="noopener noreferrer" class="footer-link">+57 324 365 1165</a><br>
+            Llamadas: <a href="tel:+573243651165" class="footer-link">+57 324 365 1165</a><br>
+            Email: <a href="mailto:niw@niw.com" class="footer-link">niw@niw.com</a><br>
+            Instagram: <a href="https://instagram.com/niw__soluciones_empresariales?exln=YWVhaXU0cnlrZ2Zi" target="_blank" rel="noopener noreferrer" class="footer-link">@niw__soluciones_empresariales</a>
+          </p>
+        </div>
+
+        
+
+        <!-- Columna 3 -->
+        <div>
+          <div class="footer-col-title">Accesibilidad & Compromiso</div>
+          <p class="footer-text">
+            Nos comprometemos a ofrecer una incorporación accesible para todos. Dinos cómo podemos ayudarte.
+          </p>
+        </div>
+      </div>
+
+      <!-- Gran Título Final -->
+      <div class="footer-big-brand">
+        Si lo imaginas, lo programamos
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón Flotante de WhatsApp Directo a Chat -->
+  <a href="https://api.whatsapp.com/send?phone=573243651165&text=Hola%2C%20me%20gustar%C3%ADa%20cotizar%20mi%20p%C3%A1gina%20web" 
+     class="floating-whatsapp-btn" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Abrir chat en WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="display:block;">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.592 2.654-.696c1.006.55 1.766.818 2.806.818 3.182 0 5.768-2.587 5.769-5.766.001-3.182-2.585-5.768-5.769-5.768zm3.364 8.163c-.14.394-.716.727-1.026.775-.297.047-.687.085-2.203-.544-1.939-.805-3.177-2.775-3.272-2.903-.095-.129-.785-1.044-.785-1.993 0-.948.498-1.415.675-1.609.177-.193.385-.242.514-.242.128 0 .257.001.37.007.119.006.278-.045.435.333.161.388.548 1.336.596 1.433.048.097.081.21.016.339-.064.129-.097.21-.193.322-.097.113-.204.252-.292.338-.097.097-.198.203-.085.397.113.193.501.826 1.077 1.339.742.661 1.368.866 1.562.963.193.097.306.081.419-.048.113-.129.483-.564.612-.757.129-.193.257-.161.435-.097.177.064 1.127.531 1.32.628.193.097.322.145.37.225.048.081.048.468-.097.862z"/>
+    </svg>
+  </a>
+
+  <!-- Modal Toast para Confirmación del Formulario -->
+  <div class="toast-modal" id="toast-modal" role="status" aria-live="polite">
+    <div class="toast-header">
+      <span class="toast-title">✉️ Solicitud de Cotización</span>
+      <button class="toast-close" id="toast-close" aria-label="Cerrar notificación">&times;</button>
+    </div>
+    <div class="toast-body" id="toast-message"></div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

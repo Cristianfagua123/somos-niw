@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Referidos | Gana tu Web 100% Gratis ($ 477.000 COP) | Niw</title>
+  <meta name="description" content="Invita a 5 amigos a digitalizarse con Niw y gana una página web profesional 100% gratis (Plan Basic valorado en $ 477.000 COP). Genera tu código único aquí.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet & Referidos Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/referidos.css">
+</head>
+<body>
+
+  <!-- ==========================================================
+       BARRA DE NAVEGACIÓN
+       ========================================================== -->
+  <header class="site-nav" id="site-nav">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-logo" aria-label="Niw - Si lo imaginas, lo programamos">
+        <img src="assets/images/logo.png" alt="Niw - Si lo imaginas, lo programamos" class="brand-logo-img" id="site-logo">
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">← Volver al Inicio</a></li>
+          <li><a href="index.html#ideales-para" class="nav-link">Sectores</a></li>
+          <li><a href="index.html#que-viene-despues" class="nav-link">Planes</a></li>
+          <li><a href="demo.html" class="nav-link">Demos en Vivo</a></li>
+          <li><a href="https://api.whatsapp.com/send?phone=573243651165&text=Hola%2C%20tengo%20una%20pregunta%20sobre%20el%20sistema%20de%20referidos" target="_blank" rel="noopener noreferrer" class="nav-cta-btn">WhatsApp Soporte</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================
+         HERO SECTION: SISTEMA DE REFERIDOS
+         ========================================================== -->
+    <section class="ref-hero">
+      <div class="container">
+        <div class="ref-pill-badge">
+          <span>🎁</span> PROGRAMA OFICIAL DE REFERIDOS NIW
+        </div>
+
+        <h1 class="ref-hero-title">
+          Gana tu Página Web<br>
+          <span>100% Gratis</span>
+        </h1>
+
+        <p class="ref-hero-subtitle">
+          Recomienda Niw a tus amigos, colegas o clientes que necesiten una página web moderna. Cuando <strong>5 personas</strong> coticen o se registren usando tu código o enlace único, recibirás un <strong>cupón del 100% de descuento</strong> para una web completa (Plan Basic valorado en <strong>$ 477.000 COP</strong>).
+        </p>
+
+        <!-- Píldora de Valor -->
+        <div class="ref-value-highlight">
+          <span>Premio: <strong class="val-tag">Página Web Plan Basic ($ 477.000 COP)</strong></span>
+          <span>•</span>
+          <span>Meta: <strong>5 Referidos</strong></span>
+          <span>•</span>
+          <span>Inversión: <strong>$ 0 COP</strong></span>
+        </div>
+
+        <!-- Banner Dinámico para Visitante Invitado por URL ?ref=... -->
+        <div class="ref-visitor-banner" id="ref-visitor-banner">
+          <div class="ref-visitor-text">
+            🎉 <span id="ref-visitor-code-text">¡Llegaste invitado por un enlace especial!</span>
+          </div>
+          <button type="button" class="ref-visitor-btn" id="btn-confirm-visit">
+            Confirmar mi apoyo (+1 referido)
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         GRID INTERACTIVO PRINCIPAL: GENERADOR + SEGUIMIENTO
+         ========================================================== -->
+    <section class="ref-interactive-section">
+      <div class="container">
+        <div class="ref-main-grid">
+
+          <!-- COLUMNA IZQUIERDA: GENERADOR Y PANEL DEL REFERIDOR -->
+          <div>
+            <!-- Estado 1: Formulario para Crear Código Único -->
+            <div class="ref-card" id="ref-card-register">
+              <div class="ref-card-header">
+                <span class="ref-step-num">PASO 1</span>
+                <h2 class="ref-card-title">Crea tu Código Personal</h2>
+                <p class="ref-card-subtitle">
+                  Ingresa tu nombre o el de tu negocio para generar tu código y enlace exclusivo para compartir.
+                </p>
+              </div>
+
+              <form id="form-create-code">
+                <div class="ref-form-group">
+                  <label for="ref-user-name" class="ref-label">Tu Nombre o Nombre de tu Empresa *</label>
+                  <input type="text" id="ref-user-name" class="ref-input" placeholder="Ej. Carlos Gómez o Restaurante Delicias" required>
+                </div>
+
+                <div class="ref-form-group">
+                  <label for="ref-user-phone" class="ref-label">Tu WhatsApp / Teléfono (opcional)</label>
+                  <input type="tel" id="ref-user-phone" class="ref-input" placeholder="Ej. 320 123 4567">
+                </div>
+
+                <button type="submit" class="ref-submit-btn" id="btn-submit-code">
+                  <span>🚀</span> Generar Mi Código & Enlace
+                </button>
+              </form>
+            </div>
+
+            <!-- Estado 2: Panel Activo del Referidor (visible tras generar código) -->
+            <div class="ref-card" id="ref-card-active" style="display: none;">
+              <div class="ref-card-header">
+                <span class="ref-step-num">PANEL ACTIVO</span>
+                <h2 class="ref-card-title">Tu Enlace de Referido</h2>
+                <p class="ref-card-subtitle" id="ref-active-greeting">
+                  ¡Tu código está listo para compartir!
+                </p>
+              </div>
+
+              <div class="ref-active-box">
+                <div class="ref-user-badge">
+                  <span class="ref-user-name">Enlace Personal Verificado</span>
+                  <button type="button" class="ref-btn-reset" id="btn-reset-user">Cambiar / Nuevo Código</button>
+                </div>
+
+                <!-- Caja de Código -->
+                <div class="ref-code-box">
+                  <div class="ref-item-title">Tu Código Único de Referido</div>
+                  <div class="ref-item-row">
+                    <span class="ref-display-code" id="ref-display-code">NIW-XXXX</span>
+                    <button type="button" class="ref-btn-copy" id="btn-copy-code">Copiar Código</button>
+                  </div>
+                </div>
+
+                <!-- Caja de Enlace -->
+                <div class="ref-link-box">
+                  <div class="ref-item-title">Tu Enlace Directo para Compartir</div>
+                  <div class="ref-item-row">
+                    <span class="ref-display-link" id="ref-display-link">https://.../index.html?ref=NIW-XXXX</span>
+                    <button type="button" class="ref-btn-copy" id="btn-copy-link">Copiar Enlace</button>
+                  </div>
+                </div>
+
+                <!-- Botones de Compartir -->
+                <div class="ref-share-actions">
+                  <a href="#" target="_blank" rel="noopener noreferrer" class="ref-btn-whatsapp-share" id="btn-share-whatsapp">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.592 2.654-.696c1.006.55 1.766.818 2.806.818 3.182 0 5.768-2.587 5.769-5.766.001-3.182-2.585-5.768-5.769-5.768zm3.364 8.163c-.14.394-.716.727-1.026.775-.297.047-.687.085-2.203-.544-1.939-.805-3.177-2.775-3.272-2.903-.095-.129-.785-1.044-.785-1.993 0-.948.498-1.415.675-1.609.177-.193.385-.242.514-.242.128 0 .257.001.37.007.119.006.278-.045.435.333.161.388.548 1.336.596 1.433.048.097.081.21.016.339-.064.129-.097.21-.193.322-.097.113-.204.252-.292.338-.097.097-.198.203-.085.397.113.193.501.826 1.077 1.339.742.661 1.368.866 1.562.963.193.097.306.081.419-.048.113-.129.483-.564.612-.757.129-.193.257-.161.435-.097.177.064 1.127.531 1.32.628.193.097.322.145.37.225.048.081.048.468-.097.862z"/>
+                    </svg>
+                    Compartir en WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COLUMNA DERECHA: PROGRESO Y SEGUIMIENTO -->
+          <div>
+            <div class="ref-card">
+              <div class="ref-card-header">
+                <span class="ref-step-num">PASO 2</span>
+                <h2 class="ref-card-title">Seguimiento de Progreso</h2>
+                <p class="ref-card-subtitle">
+                  Invita a 5 amigos. Al alcanzar los 5 referidos se desbloqueará tu cupón del 100% de descuento.
+                </p>
+              </div>
+
+              <!-- Contador Grande -->
+              <div class="ref-progress-overview">
+                <div class="ref-count-big">
+                  <span id="ref-count-number">0</span> / 5
+                </div>
+                <div class="ref-target-text">Meta: 5 personas invitadas</div>
+              </div>
+
+              <!-- Barra de Progreso Dinámica -->
+              <div class="ref-progress-track">
+                <div class="ref-progress-fill" id="ref-progress-fill"></div>
+              </div>
+
+              <!-- Hitos del 1 al 5 -->
+              <div class="ref-steps-checkpoints">
+                <div class="ref-checkpoint" data-step="1">
+                  <div class="ref-point-circle">1</div>
+                  <div class="ref-point-label">Amigo 1</div>
+                </div>
+                <div class="ref-checkpoint" data-step="2">
+                  <div class="ref-point-circle">2</div>
+                  <div class="ref-point-label">Amigo 2</div>
+                </div>
+                <div class="ref-checkpoint" data-step="3">
+                  <div class="ref-point-circle">3</div>
+                  <div class="ref-point-label">Amigo 3</div>
+                </div>
+                <div class="ref-checkpoint" data-step="4">
+                  <div class="ref-point-circle">4</div>
+                  <div class="ref-point-label">Amigo 4</div>
+                </div>
+                <div class="ref-checkpoint is-target" data-step="5">
+                  <div class="ref-point-circle">🎁</div>
+                  <div class="ref-point-label">¡Web Gratis!</div>
+                </div>
+              </div>
+
+              <!-- Historial de Referidos Registrados -->
+              <div class="ref-history-box" id="ref-history-list">
+                <div class="ref-history-empty" id="ref-history-empty">
+                  💬 Aún no tienes referidos registrados.<br>
+                  Comparte tu enlace con amigos, emprendedores o grupos de WhatsApp.
+                </div>
+              </div>
+
+              <!-- Simulador de Pruebas (Interactivo para Evaluar) -->
+              <div class="ref-simulator-box">
+                <div class="ref-sim-header">
+                  <span class="ref-sim-title">🧪 Probador & Simulador Rápido</span>
+                  <span style="font-size: 0.72rem; color: #6b7280;">Herramienta interactiva</span>
+                </div>
+                <div class="ref-sim-actions">
+                  <button type="button" class="ref-btn-sim primary" id="btn-sim-add">
+                    ➕ Simular Referido (+1)
+                  </button>
+                  <button type="button" class="ref-btn-sim primary" id="btn-sim-complete">
+                    ✨ Completar 5 Referidos (Desbloqueo)
+                  </button>
+                  <button type="button" class="ref-btn-sim" id="btn-sim-reset">
+                    🔄 Reiniciar a 0
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ==========================================================
+             CUPÓN DESBLOQUEADO (SE MUESTRA AL ALCANZAR 5/5 REFERIDOS)
+             ========================================================== -->
+        <div class="ref-reward-container" id="ref-reward-container">
+          <div class="ref-reward-card">
+            <span class="ref-reward-badge">🎉 ¡META CUMPLIDA! 5 DE 5 REFERIDOS</span>
+            <h2 class="ref-reward-title">¡Has Ganado tu Página Web 100% Gratis!</h2>
+            <p class="ref-reward-desc">
+              Completaste los 5 referidos requeridos. Tu <strong>código de descuento del 100%</strong> para el <strong>Plan Basic ($ 477.000 COP)</strong> ha sido desbloqueado. Reclámalo directamente con nuestro equipo por WhatsApp:
+            </p>
+
+            <!-- Voucher Ticket -->
+            <div class="ref-ticket-voucher">
+              <div class="ref-ticket-header">VOUCHER OFICIAL NIW • 100% DE DESCUENTO</div>
+              <div class="ref-ticket-code-wrap">
+                <span class="ref-ticket-code" id="ref-reward-code">DESC100-FREE-8X92</span>
+                <button type="button" class="ref-btn-copy" id="btn-copy-reward">Copiar Cupón</button>
+              </div>
+              <p class="ref-ticket-info">
+                Válido para 1 desarrollo completo Plan Basic (Valor comercial: $ 477.000 COP).
+              </p>
+            </div>
+
+            <!-- Botón Grande de WhatsApp con Mensaje Exacto -->
+            <div>
+              <a href="#" class="ref-claim-btn" id="btn-claim-whatsapp" target="_blank" rel="noopener noreferrer">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.592 2.654-.696c1.006.55 1.766.818 2.806.818 3.182 0 5.768-2.587 5.769-5.766.001-3.182-2.585-5.768-5.769-5.768zm3.364 8.163c-.14.394-.716.727-1.026.775-.297.047-.687.085-2.203-.544-1.939-.805-3.177-2.775-3.272-2.903-.095-.129-.785-1.044-.785-1.993 0-.948.498-1.415.675-1.609.177-.193.385-.242.514-.242.128 0 .257.001.37.007.119.006.278-.045.435.333.161.388.548 1.336.596 1.433.048.097.081.21.016.339-.064.129-.097.21-.193.322-.097.113-.204.252-.292.338-.097.097-.198.203-.085.397.113.193.501.826 1.077 1.339.742.661 1.368.866 1.562.963.193.097.306.081.419-.048.113-.129.483-.564.612-.757.129-.193.257-.161.435-.097.177.064 1.127.531 1.32.628.193.097.322.145.37.225.048.081.048.468-.097.862z"/>
+                </svg>
+                RECLAMAR MI WEB GRATIS EN WHATSAPP
+              </a>
+              <div class="ref-claim-subtext">
+                Se abrirá WhatsApp con tu código listo para ser validado por nuestro equipo de soporte.
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SECCIÓN: QUÉ INCLUYE TU PÁGINA WEB GRATIS ($ 477.000 COP)
+         ========================================================== -->
+    <section class="ref-details-section" id="que-incluye">
+      <div class="container">
+        <h2 class="ref-details-title">¿Qué incluye tu Premio de $ 477.000 COP?</h2>
+        <p class="ref-details-subtitle">
+          Recibes la totalidad del <strong>Plan Basic</strong> sin pagar mensualidades ocultas ni costos de activación durante el primer año:
+        </p>
+
+        <div class="ref-plan-features-grid">
+          <div class="ref-plan-feature-card">
+            <span class="ref-feature-icon">🚀</span>
+            <div class="ref-feature-text">
+              <h4>Desarrollo de App Web</h4>
+              <p>Sitio web moderno, rápido, adaptado a celulares, tablets y computadores.</p>
+            </div>
+          </div>
+
+          <div class="ref-plan-feature-card">
+            <span class="ref-feature-icon">🌐</span>
+            <div class="ref-feature-text">
+              <h4>Dominio .com + Hosting</h4>
+              <p>Alojamiento optimizado de alta velocidad y dominio .com 100% gratis por 1 año.</p>
+            </div>
+          </div>
+
+          <div class="ref-plan-feature-card">
+            <span class="ref-feature-icon">🛡️</span>
+            <div class="ref-feature-text">
+              <h4>Mantenimiento 1 Año</h4>
+              <p>Actualizaciones de seguridad y soporte técnico gratuito durante todo el primer año.</p>
+            </div>
+          </div>
+
+          <div class="ref-plan-feature-card">
+            <span class="ref-feature-icon">📊</span>
+            <div class="ref-feature-text">
+              <h4>Panel de Administrador</h4>
+              <p>Control total de tu contenido, textos, imágenes, pedidos y clientes en tiempo real.</p>
+            </div>
+          </div>
+
+          <div class="ref-plan-feature-card">
+            <span class="ref-feature-icon">💼</span>
+            <div class="ref-feature-text">
+              <h4>Panel de Finanzas</h4>
+              <p>Métricas de ventas, ingresos, balance e historial de pedidos centralizados.</p>
+            </div>
+          </div>
+
+          <div class="ref-plan-feature-card">
+            <span class="ref-feature-icon">🔗</span>
+            <div class="ref-feature-text">
+              <h4>Vinculación a Redes</h4>
+              <p>Integración directa con Instagram, Facebook, TikTok y WhatsApp Business.</p>
+            </div>
+          </div>
+
+          <div class="ref-plan-feature-card">
+            <span class="ref-feature-icon">📦</span>
+            <div class="ref-feature-text">
+              <h4>Cargue Ilimitado de Productos</h4>
+              <p>Puedes agregar todos los productos o servicios que desees sin límites.</p>
+            </div>
+          </div>
+
+          <div class="ref-plan-feature-card">
+            <span class="ref-feature-icon">✨</span>
+            <div class="ref-feature-text">
+              <h4>25 Ítems Cargados</h4>
+              <p>Nuestro equipo sube tus primeros 25 productos o servicios listos para la venta.</p>
+            </div>
+          </div>
+
+          <div class="ref-plan-feature-card">
+            <span class="ref-feature-icon">🛒</span>
+            <div class="ref-feature-text">
+              <h4>Carrito a WhatsApp</h4>
+              <p>Tus clientes agregan productos y el pedido llega formateado a tu chat de WhatsApp.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ: Preguntas Frecuentes -->
+        <h3 style="text-align: center; font-size: 1.5rem; font-weight: 800; margin-bottom: 24px;">Preguntas Frecuentes</h3>
+        <div class="ref-faq-list" id="como-funciona">
+          <div class="ref-faq-item open">
+            <div class="ref-faq-question">
+              <span>¿Cómo cuenta un referido como válido?</span>
+              <span class="ref-faq-arrow">▼</span>
+            </div>
+            <div class="ref-faq-answer">
+              Cuando compartes tu enlace o tu código único con un conocido y esa persona hace una compra con nosotros de su sitio web indicando tu código, el sistema lo registra como un referido confirmado.
+            </div>
+          </div>
+
+          <div class="ref-faq-item">
+            <div class="ref-faq-question">
+              <span>¿Cuánto tiempo tengo para invitar a las 5 personas?</span>
+              <span class="ref-faq-arrow">▼</span>
+            </div>
+            <div class="ref-faq-answer">
+              No hay límite de tiempo. Puedes acumular tus 5 referidos en días, semanas o meses. Tu código y progreso se mantienen guardados.
+            </div>
+          </div>
+
+          <div class="ref-faq-item">
+            <div class="ref-faq-question">
+              <span>¿Qué costo tiene la página para mí al completar los 5 referidos?</span>
+              <span class="ref-faq-arrow">▼</span>
+            </div>
+            <div class="ref-faq-answer">
+              $ 0 COP. El cupón cubre el 100% del valor base del Plan Basic ($ 477.000 COP), incluyendo dominio .com por 1 año, hosting optimizado por 1 año, mantenimiento por 1 año, panel administrativo y catálogo.
+            </div>
+          </div>
+
+          <div class="ref-faq-item">
+            <div class="ref-faq-question">
+              <span>¿Puedo transferir mi cupón a un familiar o amigo?</span>
+              <span class="ref-faq-arrow">▼</span>
+            </div>
+            <div class="ref-faq-answer">
+              ¡Sí! Si ya tienes un sitio web y deseas regalarle el cupón a un emprendimiento amigo o familiar, solo deben enviar el código a nuestro WhatsApp al momento de iniciar el proyecto.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================
+       FOOTER
+       ========================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Columna 1 -->
+        <div>
+          <div class="footer-col-title">Contacto</div>
+          <p class="footer-text">
+            WhatsApp: <a href="https://api.whatsapp.com/send?phone=573243651165&text=Hola%2C%20tengo%20una%20consulta%20sobre%20mi%20c%C3%B3digo%20de%20referidos" target="_blank" rel="noopener noreferrer" class="footer-link">+57 324 365 1165</a><br>
+            Llamadas: <a href="tel:+573243651165" class="footer-link">+57 324 365 1165</a><br>
+            Email: <a href="mailto:niw@niw.com" class="footer-link">niw@niw.com</a><br>
+            Redes sociales: <a href="https://instagram.com/niw__soluciones_empresariales?exln=YWVhaXU0cnlrZ2Zi" target="_blank" rel="noopener noreferrer" class="footer-link">@niw__soluciones_empresariales</a>
+          </p>
+        </div>
+
+        <!-- Columna 2 -->
+        <div>
+          <div class="footer-col-title">Ubicación</div>
+          <p class="footer-text">
+            Leo recordar cambiar, 123<br>
+            Numeros y poner Cualquier Ciudad,<br>
+          </p>
+        </div>
+
+        <!-- Columna 3 -->
+        <div>
+          <div class="footer-col-title">Accesibilidad & Compromiso</div>
+          <p class="footer-text">
+            Nos comprometemos a ofrecer una incorporación accesible para todos. Dinos cómo podemos ayudarte.
+          </p>
+        </div>
+      </div>
+
+      <!-- Gran Título Final -->
+      <div class="footer-big-brand">
+        Si lo imaginas, lo programamos
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón Flotante de WhatsApp Directo a Chat -->
+  <a href="https://api.whatsapp.com/send?phone=573243651165&text=Hola%2C%20tengo%20preguntas%20sobre%20el%20sistema%20de%20referidos" 
+     class="floating-whatsapp-btn" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Abrir chat en WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="display:block;">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.592 2.654-.696c1.006.55 1.766.818 2.806.818 3.182 0 5.768-2.587 5.769-5.766.001-3.182-2.585-5.768-5.769-5.768zm3.364 8.163c-.14.394-.716.727-1.026.775-.297.047-.687.085-2.203-.544-1.939-.805-3.177-2.775-3.272-2.903-.095-.129-.785-1.044-.785-1.993 0-.948.498-1.415.675-1.609.177-.193.385-.242.514-.242.128 0 .257.001.37.007.119.006.278-.045.435.333.161.388.548 1.336.596 1.433.048.097.081.21.016.339-.064.129-.097.21-.193.322-.097.113-.204.252-.292.338-.097.097-.198.203-.085.397.113.193.501.826 1.077 1.339.742.661 1.368.866 1.562.963.193.097.306.081.419-.048.113-.129.483-.564.612-.757.129-.193.257-.161.435-.097.177.064 1.127.531 1.32.628.193.097.322.145.37.225.048.081.048.468-.097.862z"/>
+    </svg>
+  </a>
+
+  <!-- Toast Notifier -->
+  <div class="ref-toast" id="ref-toast"></div>
+
+  <!-- JavaScript -->
+  <script src="assets/js/referidos.js"></script>
+</body>
+</html>
