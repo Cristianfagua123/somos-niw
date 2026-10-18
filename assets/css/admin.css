@@ -117,6 +117,8 @@ body {
 .login-form { text-align: left; }
 .login-error { color: var(--danger); font-size: 0.875rem; margin: 8px 0; min-height: 20px; }
 .login-hint { margin-top: 24px; font-size: 0.8rem; color: var(--text-muted); }
+.login-reset { display: block; margin-top: 8px; font-size: 0.8rem; color: var(--accent); text-decoration: none; }
+.login-reset:hover { text-decoration: underline; }
 
 /* ==========================================================
    APP SHELL LAYOUT

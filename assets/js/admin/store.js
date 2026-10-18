@@ -91,10 +91,20 @@ const Store = (() => {
         for (const k of Object.keys(defs)) {
           if (cache[k] === undefined) cache[k] = defs[k];
         }
-        // Ensure default admin user always exists
+        // Ensure default admin user always exists and is active
         if (!cache.usuarios || cache.usuarios.length === 0) {
           cache.usuarios = defs.usuarios;
           save();
+        } else {
+          const admin = cache.usuarios.find(u => u.email === 'admin@niw.co');
+          if (!admin) {
+            cache.usuarios.push(defs.usuarios[0]);
+            save();
+          } else if (!admin.activo || !admin.password) {
+            admin.activo = true;
+            if (!admin.password) admin.password = 'admin123';
+            save();
+          }
         }
       } else {
         cache = defaultData();

@@ -36,6 +36,14 @@ const App = (() => {
 
     // Login form
     document.getElementById('login-form').addEventListener('submit', handleLogin);
+    document.getElementById('login-reset').addEventListener('click', (e) => {
+      e.preventDefault();
+      if (confirm('¿Restablecer el acceso? Se borrarán los datos locales y se recargará la página.')) {
+        localStorage.removeItem('niw_admin_data');
+        sessionStorage.removeItem('niw_admin_session');
+        location.reload();
+      }
+    });
     document.getElementById('btn-logout').addEventListener('click', () => {
       Auth.logout();
       showLogin();
