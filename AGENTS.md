@@ -19,8 +19,9 @@ so edits to HTML/CSS/JS appear immediately on refresh — no rebuild needed.
   ui.js (components), app.js (router + pages)
 - CSS: `assets/css/admin.css` (dark/light themes via `data-theme` attribute)
 - Data stored in localStorage key `niw_admin_data`; session in sessionStorage
-- Being built in phases per the spec; Phase 1 complete (data model, roles,
-  sidebar, config, user management). Other tabs show "coming soon" placeholders.
+- All phases complete: Resumen Ejecutivo, Utilidad Real, Finanzas, Flujo de Caja,
+  Cartera, Compras/OC, Ventas/CAC/LTV/NPS, Meta Ads, Ingeniería (DORA), Proyectos,
+  Configuración.
 
 ## Notes
 - The repo directory has restrictive (700) permissions, so nginx runs as

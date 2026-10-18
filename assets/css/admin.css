@@ -456,6 +456,50 @@ tr:hover td { background: var(--bg-hover); }
 .ml-auto { margin-left: auto; }
 
 /* ==========================================================
+   CHARTS & VISUAL COMPONENTS
+   ========================================================== */
+
+/* Bar chart (horizontal) */
+.bar-chart { padding: 8px 0; }
+.bar-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.bar-label { width: 160px; font-size: 0.85rem; color: var(--text-secondary); flex-shrink: 0; text-align: right; }
+.bar-track { flex: 1; height: 24px; background: var(--bg-hover); border-radius: 6px; overflow: hidden; }
+.bar-fill { height: 100%; background: var(--accent); border-radius: 6px; transition: width 0.4s ease; min-width: 2px; }
+.bar-value { font-size: 0.82rem; font-weight: 600; color: var(--text-secondary); min-width: 140px; }
+
+/* Grouped bar chart (cash flow) */
+.bar-chart-grouped { display: flex; align-items: flex-end; gap: 16px; height: 200px; padding: 16px 0; justify-content: center; }
+.bar-group { display: flex; flex-direction: column; align-items: center; gap: 6px; min-width: 60px; }
+.bar-pair { display: flex; gap: 4px; align-items: flex-end; height: 160px; }
+.bar-col { width: 24px; height: 100%; display: flex; align-items: flex-end; }
+.bar { width: 100%; border-radius: 4px 4px 0 0; transition: height 0.4s ease; min-height: 2px; }
+.bar-green { background: var(--success); }
+.bar-red { background: var(--danger); }
+.bar-group-label { font-size: 0.78rem; color: var(--text-muted); }
+.bar-group-net { font-size: 0.75rem; font-weight: 600; }
+
+/* Funnel */
+.funnel { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 16px 0; }
+.funnel-row { display: flex; justify-content: center; width: 100%; }
+.funnel-bar { display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; border-radius: 8px; color: #fff; font-weight: 600; min-height: 44px; min-width: 200px; transition: width 0.4s ease; }
+.funnel-label { font-size: 0.9rem; }
+.funnel-count { font-size: 1.1rem; font-weight: 800; }
+
+/* Progress bar */
+.progress-bar { width: 100px; height: 8px; background: var(--bg-hover); border-radius: 4px; overflow: hidden; display: inline-block; vertical-align: middle; margin-right: 8px; }
+.progress-fill { height: 100%; background: var(--accent); border-radius: 4px; transition: width 0.4s ease; }
+
+/* OC item rows */
+.oc-item-row { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; padding: 8px; background: var(--bg-hover); border-radius: 8px; }
+.oc-item-row input { flex: 1; padding: 6px 10px; border: 1px solid var(--border-input); border-radius: 6px; font-size: 0.85rem; background: var(--bg-input); color: var(--text-primary); }
+.oc-item-row input.oc-item-qty { max-width: 80px; flex: 0 0 80px; }
+.oc-item-row input.oc-item-price { max-width: 120px; flex: 0 0 120px; }
+.oc-item-row .oc-item-subtotal { font-size: 0.85rem; font-weight: 600; min-width: 100px; text-align: right; color: var(--text-secondary); }
+.oc-item-row .oc-item-del { flex: 0 0 auto; }
+
+.p-16 { padding: 16px; }
+
+/* ==========================================================
    RESPONSIVE
    ========================================================== */
 @media (max-width: 1024px) {

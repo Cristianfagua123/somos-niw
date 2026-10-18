@@ -23,6 +23,11 @@ const App = (() => {
   let customFrom = '';
   let customTo = '';
 
+  // Expose for sub-modules
+  Object.defineProperty(App, '_dateRange', { get: () => dateRange });
+  Object.defineProperty(App, '_customFrom', { get: () => customFrom });
+  Object.defineProperty(App, '_customTo', { get: () => customTo });
+
   // ── Init ──────────────────────────────────────────────
   function init() {
     Store.load();
@@ -175,6 +180,41 @@ const App = (() => {
     if (currentTab === 'cartera') {
       content.innerHTML = CarteraPage.render();
       CarteraPage.bind();
+      return;
+    }
+    if (currentTab === 'compras') {
+      content.innerHTML = ComprasPage.render();
+      ComprasPage.bind();
+      return;
+    }
+    if (currentTab === 'utilidad' || currentTab === 'finanzas' || currentTab === 'flujo_caja') {
+      content.innerHTML = FinanzasPage.render(currentTab);
+      FinanzasPage.bind(currentTab);
+      return;
+    }
+    if (currentTab === 'ventas') {
+      content.innerHTML = VentasPage.render();
+      VentasPage.bind();
+      return;
+    }
+    if (currentTab === 'meta_ads') {
+      content.innerHTML = MetaAdsPage.render();
+      MetaAdsPage.bind();
+      return;
+    }
+    if (currentTab === 'ingenieria') {
+      content.innerHTML = IngenieriaPage.render();
+      IngenieriaPage.bind();
+      return;
+    }
+    if (currentTab === 'proyectos') {
+      content.innerHTML = ProyectosPage.render();
+      ProyectosPage.bind();
+      return;
+    }
+    if (currentTab === 'resumen') {
+      content.innerHTML = ResumenPage.render();
+      ResumenPage.bind();
       return;
     }
 
