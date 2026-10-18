@@ -38,7 +38,7 @@ const Auth = (() => {
 
   function login(email, password) {
     const usuarios = Store.get('usuarios') || [];
-    const user = usuarios.find(u => u.email === email && u.password === password && u.activo);
+    const user = usuarios.find(u => u.email.toLowerCase() === email.toLowerCase() && u.password === password && u.activo);
     if (!user) return null;
     const session = { id: user.id, nombre: user.nombre, email: user.email, rol: user.rol };
     sessionStorage.setItem(SESSION_KEY, JSON.stringify(session));

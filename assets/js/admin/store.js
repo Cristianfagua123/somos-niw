@@ -91,6 +91,11 @@ const Store = (() => {
         for (const k of Object.keys(defs)) {
           if (cache[k] === undefined) cache[k] = defs[k];
         }
+        // Ensure default admin user always exists
+        if (!cache.usuarios || cache.usuarios.length === 0) {
+          cache.usuarios = defs.usuarios;
+          save();
+        }
       } else {
         cache = defaultData();
         save();
