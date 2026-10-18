@@ -166,10 +166,15 @@ const App = (() => {
     const tab = TABS.find(t => t.id === currentTab);
     if (!tab) return;
 
-    // Pages implemented in Phase 1
+    // Pages implemented
     if (currentTab === 'configuracion') {
       content.innerHTML = renderConfig();
       bindConfig();
+      return;
+    }
+    if (currentTab === 'cartera') {
+      content.innerHTML = CarteraPage.render();
+      CarteraPage.bind();
       return;
     }
 
@@ -613,7 +618,7 @@ const App = (() => {
     return el ? el.value.trim() : '';
   }
 
-  return { init, TABS };
+  return { init, TABS, renderCurrentPage };
 })();
 
 document.addEventListener('DOMContentLoaded', () => App.init());
