@@ -44,6 +44,17 @@ const App = (() => {
         location.reload();
       }
     });
+    document.getElementById('login-google').addEventListener('click', () => {
+      UI.toast('Inicio de sesión con Google requiere configuración. Usa correo y contraseña por ahora.', 'info');
+    });
+    document.getElementById('login-forgot').addEventListener('click', (e) => {
+      e.preventDefault();
+      UI.toast('Contacta al administrador para restablecer tu contraseña.', 'info');
+    });
+    document.getElementById('login-create').addEventListener('click', (e) => {
+      e.preventDefault();
+      UI.toast('Contacta al administrador para crear una cuenta nueva.', 'info');
+    });
     document.getElementById('btn-logout').addEventListener('click', () => {
       Auth.logout();
       showLogin();
